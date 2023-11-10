@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 import clients from "../../database/dados";
-import { parse } from "path";
+
 
 export const updateTutor = (req:Request, res:Response) => {
     var userId = req.params.id;

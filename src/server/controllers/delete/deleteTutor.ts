@@ -1,6 +1,5 @@
 import { Request, Response } from "express";
 import clients from "../../database/dados";
-import { parse } from "path";
 
 export const deleteTutor = (req:Request, res:Response) => {
     var userId = req.params.id;
