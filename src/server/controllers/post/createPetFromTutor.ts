@@ -1,14 +1,33 @@
 import { Response, Request } from "express";
-import clients from "../../database/dados";
+import clients, { idsClientesUtilizados } from "../../database/dados";
+import { idsPetsUtilizados } from "../../database/dados";
 
 export const createPetFromTutor = (req:Request, res:Response) => {
-    const tutorId = req.params.tutorId
-    const tutorIdNum = parseInt(tutorId,10);
+    const tutorId = req.params.tutorId;
+    const dadoPet = req.body;
 
-    clients.forEach((client) => {
-        if(client.id === tutorIdNum){
-            client.pets.push(req.body)
-            return res.send("Adicionado")
+
+    let idPetExist = false
+    for(let x of idsPetsUtilizados){
+        if(x === dadoPet.id){
+            idPetExist = true
         }
-    })
+    }
+
+
+    
+    if(idPetExist){
+        return res.send("Id de pet ja existe");
+    }else{
+        clients.forEach((client) => {
+            if(client.id == tutorId){
+                client.pets.push(dadoPet)
+                return res.send("Adicionado")
+            }
+        })
+
+        idsPetsUtilizados.push(dadoPet.id)
+    }
+    
+
 }

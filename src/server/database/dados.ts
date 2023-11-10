@@ -21,4 +21,7 @@ const clients:any[] = [
     }
 ]
 
+export let idsClientesUtilizados:number[] = [1];
+export let idsPetsUtilizados:number[] = [1];
+
 export default clients
