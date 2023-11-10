@@ -1,10 +1,12 @@
-const clients = [
+
+
+const clients:any[] = [
     {
-        "id":1,
+        "id":0,
             "name":"Julio Cesar",
             "phone":"44999999999",
             "email":"julio@gmail.com",
-            "date-of_birth":"1993-12-12 10:10",
+            "date_of_birth":"1993-12-12 10:10",
             "zipCode":"61760000",
             "pets":[
                 {
@@ -13,25 +15,7 @@ const clients = [
                     "species":"dog",
                     "carry":"p",
                     "weight": 5,
-                    "date-of_birth":"1993-12-12 10:10"
-                }
-            ]
-    },
-    {
-        "id":2,
-            "name":"Julio Cesar",
-            "phone":"44999999999",
-            "email":"julio@gmail.com",
-            "date-of_birth":"1993-12-12 10:10",
-            "zipCode":"61760000",
-            "pets":[
-                {
-                    "id":2,
-                    "name":"Snoopy",
-                    "species":"dog",
-                    "carry":"p",
-                    "weight": 5,
-                    "date-of_birth":"1993-12-12 10:10"
+                    "date_of_birth":"1993-12-12 10:10"
                 }
             ]
     }
