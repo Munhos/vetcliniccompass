@@ -19,6 +19,8 @@ router.post("/pet/:tutorId", createPetFromTutor)
 //--PUT-----
 router.put("/tutor/:id" , updateTutor);
 
+//router.put("/pet/:petId/tutor/:tutorId", updatePet);
+
 //--DELETE--
 router.delete("/tutor/:id", deleteTutor);
 
