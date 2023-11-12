@@ -31,3 +31,9 @@ export const createPetFromTutor = (req:Request, res:Response) => {
     
 
 }*/
+
+import Tutor from "../../database/models/tutors";
+import Pets from "../../database/models/pets";
+export const createPetFromTutor = (req:Request, res:Response) => {
+    const userId= req.params.id;
+}

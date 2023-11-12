@@ -19,3 +19,14 @@ export const deleteTutor = (req:Request, res:Response) => {
     return res.send("Deletou");
     
 }*/
+import Tutor from "../../database/models/tutors";
+import Pets from "../../database/models/pets";
+
+export const deleteTutor = async(req:Request, res:Response) => {
+    const userId= req.params.id;
+
+    await Tutor.deleteOne({id: userId});
+    await Pets.deleteMany({idTutor: userId});
+
+    return res.send("Deletado");
+}
