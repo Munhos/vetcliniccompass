@@ -34,6 +34,19 @@ export const createPetFromTutor = (req:Request, res:Response) => {
 
 import Tutor from "../../database/models/tutors";
 import Pets from "../../database/models/pets";
-export const createPetFromTutor = (req:Request, res:Response) => {
+export const createPetFromTutor = async(req:Request, res:Response) => {
     const userId= req.params.id;
+    
+
+    await Pets.create({
+        id: req.body.id,
+        idTutor: req.body.idTutor,   //REVISAR, NAO ESTA FUNCIONANDO
+        name: req.body.name,
+        species: req.body.species,
+        carry: req.body.carry,
+        weight: req.body.weight,
+        date_of_birth: req.body.date_of_birth
+    })
+
+    return res.send("Criado")
 }

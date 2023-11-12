@@ -7,7 +7,7 @@ import { addTutor } from "../controllers/post/addTutor";
 import { updateTutor } from "../controllers/put/updateTutor";
 import { deleteTutor } from "../controllers/delete/deleteTutor";
 import { createPetFromTutor } from "../controllers/post/createPetFromTutor";
-//import { updatePet } from "../controllers/put/updatePet";
+import { updatePet } from "../controllers/put/updatePet";
 
 //--GET-----
 router.get("/tutors", revealTutors);
@@ -20,7 +20,7 @@ router.post("/pet/:tutorId", createPetFromTutor)
 //--PUT-----
 router.put("/tutor/:id" , updateTutor);
 
-//router.put("/pet/:petId/tutor/:tutorId", updatePet);
+router.put("/pet/:petId/tutor/:tutorId", updatePet);
 
 //--DELETE--
 router.delete("/tutor/:id", deleteTutor);

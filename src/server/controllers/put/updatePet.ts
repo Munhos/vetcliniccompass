@@ -30,3 +30,7 @@ export const updatePet = (req:Request, res:Response) => {
     }
 
 }*/
+
+export const updatePet = (req:Request, res:Response) => {
+    return res.send("Atualizado")
+}
