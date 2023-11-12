@@ -30,3 +30,19 @@ export const updateTutor = (req:Request, res:Response) => {
     
     
 }*/
+import Tutor from "../../database/models/tutors";
+import Pets from "../../database/models/pets";
+export const updateTutor = async (req: Request, res: Response) => {
+    
+    const userId= req.params.id;
+    
+    //Atualizando o tutor
+    await Tutor.updateOne({ id: userId }, req.body);
+
+    //Atualizando o pet
+
+    await Pets.updateMany({ idTutor: userId },{ idTutor: req.body.id });
+    
+
+    return res.send("Atualizado com sucesso");
+  };
