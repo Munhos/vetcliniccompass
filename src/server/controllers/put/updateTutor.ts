@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import clients from "../../database/dados";
+/*import clients from "../../database/dados";
 import { idsClientesUtilizados } from "../../database/dados";
 
 
@@ -29,4 +29,4 @@ export const updateTutor = (req:Request, res:Response) => {
     }
     
     
-}
+}*/

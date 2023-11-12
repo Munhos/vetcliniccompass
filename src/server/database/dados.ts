@@ -1,6 +1,9 @@
 
 
-const clients:any[] = [
+
+
+
+/*const clients:any[] = [
     {
         "id":1,
             "name":"Julio Cesar",
@@ -24,4 +27,4 @@ const clients:any[] = [
 export let idsClientesUtilizados:number[] = [1];
 export let idsPetsUtilizados:number[] = [1];
 
-export default clients
+export default clients;*/

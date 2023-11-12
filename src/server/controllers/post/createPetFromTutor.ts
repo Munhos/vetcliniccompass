@@ -1,5 +1,5 @@
 import { Response, Request } from "express";
-import clients, { idsClientesUtilizados } from "../../database/dados";
+/*import clients, { idsClientesUtilizados } from "../../database/dados";
 import { idsPetsUtilizados } from "../../database/dados";
 
 export const createPetFromTutor = (req:Request, res:Response) => {
@@ -30,4 +30,4 @@ export const createPetFromTutor = (req:Request, res:Response) => {
     }
     
 
-}
+}*/

@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import clients from "../../database/dados";
+/*import clients from "../../database/dados";
 import { idsClientesUtilizados } from "../../database/dados";
 
 export const deleteTutor = (req:Request, res:Response) => {
@@ -18,4 +18,4 @@ export const deleteTutor = (req:Request, res:Response) => {
 
     return res.send("Deletou");
     
-}
+}*/
