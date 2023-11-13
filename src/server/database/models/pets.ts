@@ -38,4 +38,4 @@ const petsSchema = new Schema({
 
 const Pets = mongoose.model("Pets", petsSchema);
 
-export default Pets
+export default Pets;

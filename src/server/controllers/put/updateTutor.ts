@@ -49,7 +49,7 @@ export const updateTutor = async (req: Request, res: Response) => {
 
         return res.send("Atualizado com sucesso.");
     }else{
-        return res.send("Tutor não existe.")
+        return res.send("Tutor não existe.");
     }
    
-  };
+  }

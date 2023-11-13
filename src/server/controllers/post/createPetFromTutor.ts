@@ -6,7 +6,7 @@ export const createPetFromTutor = async(req:Request, res:Response) => {
     
     //VERIFICAÇÕES PARA VER SE TUTOR E PET EXISTE
     const existTutorPet = await Tutor.findOne({id: req.body.idTutor});
-    const existPet = await Pets.findOne({id: req.body.id})
+    const existPet = await Pets.findOne({id: req.body.id});
 
     if(existTutorPet){
         if(!existPet){

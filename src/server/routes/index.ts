@@ -16,7 +16,7 @@ router.get("/tutors", revealTutors);
 //--POST----
 router.post("/tutor", addTutor);
 
-router.post("/pet/:tutorId", createPetFromTutor)
+router.post("/pet/:tutorId", createPetFromTutor);
 
 //--PUT-----
 router.put("/tutor/:id" , updateTutor);

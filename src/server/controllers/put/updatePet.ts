@@ -4,7 +4,7 @@ import Pets from "../../database/models/pets";
 
 export const updatePet = async(req:Request, res:Response) => {
     //VERIFICAÇÕES PARA VER SE PET EXISTE
-    const existPet = await Pets.findOne({id: req.body.id})
+    const existPet = await Pets.findOne({id: req.body.id});
 
     const petId = req.params.petId;
     
