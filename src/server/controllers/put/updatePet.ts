@@ -41,5 +41,5 @@ export const updatePet = async(req:Request, res:Response) => {
 
     await Pets.updateOne({id: petId}, req.body);
 
-    return res.send("Pet atualizado")
+    return res.send("Pet atualizado.")
 }

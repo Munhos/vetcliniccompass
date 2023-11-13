@@ -44,5 +44,5 @@ export const updateTutor = async (req: Request, res: Response) => {
     await Pets.updateMany({ idTutor: userId },{ idTutor: req.body.id });
     
 
-    return res.send("Atualizado com sucesso");
+    return res.send("Atualizado com sucesso.");
   };
