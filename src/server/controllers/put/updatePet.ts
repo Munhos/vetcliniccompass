@@ -35,7 +35,7 @@ import Tutor from "../../database/models/tutors";
 import Pets from "../../database/models/pets";
 
 export const updatePet = async(req:Request, res:Response) => {
-    const userId = req.params.tutorId;
+    const userId = req.params.tutorId;   //PARA QUE VAI SER USADO?
     const petId = req.params.petId;
     
 
