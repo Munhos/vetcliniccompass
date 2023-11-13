@@ -4,6 +4,7 @@ import Pets from "../../database/models/pets";
 
 
 export const deleteTutor = async(req:Request, res:Response) => {
+    //VERIFICAÇÕES PARA VER SE TUTOR EXISTE
     const userId= req.params.id;
     const existTutorId = await Tutor.findOne({id: userId});
 
