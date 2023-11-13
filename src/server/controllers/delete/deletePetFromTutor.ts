@@ -4,12 +4,16 @@ import Tutor from "../../database/models/tutors";
 import Pets from "../../database/models/pets";
 
 export const deletePetFromTutor = async(req: Request, res:Response) => {
-    const userId = req.params.tutorId;   //PARA QUE VAI SER USADO?
-    const petId = req.params.petId;
     
-
-    await Pets.deleteOne({id: petId});
-
-    return res.send("Pet deletado");
+    const petId = req.params.petId;
+    const existPetId = await Pets.findOne({id: petId});
+    
+    if(existPetId){
+        await Pets.deleteOne({id: petId});
+        return res.send("Pet deletado");
+    }else{
+        return res.send("Pet não existe");
+    }
+    
 
 }
